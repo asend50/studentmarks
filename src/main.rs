@@ -91,10 +91,10 @@ fn main() {
 
     loop {
     let mut input1 = String::new();
-    println!("\nWould you like to search for a student's marks? (yes/no)");
+    println!("\nWould you like to search for a student's marks? (y/n)");
     io::stdin().read_line(&mut input1).expect("Failed to read line");
 
-    if input1.trim().to_lowercase() == "yes" {
+    if input1.trim().to_lowercase() == "yes" || input1.trim().to_lowercase() == "y" {
         let mut input2 = String::new();
     println!("\nSearch for a student's marks by typing their name:");
     io::stdin().read_line(&mut input2).expect("Failed to read line");
@@ -114,7 +114,7 @@ fn main() {
         println!("\nStudent not found.");
     }
     }
-    else if input1.trim().to_lowercase() == "no" {
+    else if input1.trim().to_lowercase() == "no" || input1.trim().to_lowercase() == "n" {
         println!("\nExiting the program.");
         break;
     } else {
